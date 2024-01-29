@@ -1,8 +1,11 @@
 import React from 'react';
-import RefsFunc from './refs-func';
-import RefsArray from './refs-array'
-import StateFunc from './state-func';
+import Content from './context-content';
+import { userContext } from './context';
 function App() {
-    return <StateFunc/>
+    return (
+        <userContext.Provider value={'Tom Jerry'}>
+        <Content/>
+        </userContext.Provider>
+    )
 }
-export default App;
+export default App
