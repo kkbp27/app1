@@ -1,10 +1,13 @@
 import React from 'react';
-import Content from './context-content';
 import { userContext } from './context';
-function App() {
+import Content2 from './context-content2';
+import Header2 from './context-header2';
+export function App(){
+    let [user , setUser] = React.useState('')
     return (
-        <userContext.Provider value={'Tom Jerry'}>
-        <Content/>
+        <userContext.Provider value={[user , setUser]}>
+        <Header2/>
+        <Content2/>
         </userContext.Provider>
     )
 }
